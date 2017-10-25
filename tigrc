@@ -14,5 +14,11 @@ set line-graphics = utf-8
 # Bindings
 # --------
 
+# MAIN VIEW
+
 # Perform a reset on commit for main file
 bind main <Ctrl-r> !git reset --mixed %(commit)
+
+# REFS VIEW
+bind refs <Ctrl-x> !git push origin :%(branch)
+bind refs B !git checkout -b %(branch) %(remote)/%(branch)
